@@ -1,10 +1,38 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './css.css'
 import videojs from 'video.js';
 
 import introEye from '../assets/intro_eye.png'
 import videoSrc from '../assets/main_video.mp4'
 
+// Hook
+function useWindowSize() {
+    const isClient = typeof window === 'object';
+  
+    function getSize() {
+      return {
+        width: isClient ? window.innerWidth : undefined,
+        height: isClient ? window.innerHeight : undefined
+      };
+    }
+  
+    const [windowSize, setWindowSize] = useState(getSize);
+  
+    useEffect(() => {
+      if (!isClient) {
+        return false;
+      }
+      
+      function handleResize() {
+        setWindowSize(getSize());
+      }
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []); // Empty array ensures that effect is only run on mount and unmount
+  
+    return windowSize;
+  }
 
 function Content() {
     const playerRef = useRef();
@@ -23,8 +51,14 @@ function Content() {
             <div data-vjs-player>
                 <video ref={playerRef} autoPlay={true} loop={true} className="video-js vjs-16-9" playsInline />
             </div>
+            {
+                useWindowSize().width < 500 ?
+                <img style={{width:"100%"}} src={introEye} />
+                : null
+            }
             <div className="container">
-
+            {
+                useWindowSize().width > 500 ?
                 <div className="introDesignPage row"
                     style={{
                         backgroundImage:`url(${introEye})`,
@@ -62,45 +96,35 @@ function Content() {
                     </div>
                     <div className="col-3"></div>
                 </div>
-            </div>
-            {/* <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
-                <ol className="carousel-indicators">
-                    <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                </ol>
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img src={Image1} className="d-block w-100" alt="img1" />
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                :
+                <div className="introDesignPageMobile">
+                    <div className="introDesignPageText" style={{marginTop:'3rem'}}>
+                        <div className="introDesignPageTextDes">
+                            VR로 쉽고 간편한 건강 체크 솔루션 제공
+                        </div>
+                        <h2>"눈은 건강의 indicator"</h2>
+                        <div className="d-flex">
+                            <div className="introItem row">
+                                <div className="col align-self-center">
+                                    안과
+                                </div>
+                            </div>
+                            <div className="introItem row">
+                                <div className="col align-self-center">
+                                    이빈후과
+                                </div>
+                            </div>
+                            <div className="introItem row">
+                                <div className="col align-self-center">
+                                    신경과
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="carousel-item">
-                        <img src={Image1} className="d-block w-100" alt="img2" />
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                    <div className="carousel-item">
-                        <img src={Image1} className="d-block w-100" alt="img3" />
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                        </div>
-                    </div>
+                    <div className="col-3"></div>
                 </div>
-                <a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
-                </a>
-                <a className="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
-                </a>
-            </div> */}
+            }
+            </div>
         </div>
     )
 }
