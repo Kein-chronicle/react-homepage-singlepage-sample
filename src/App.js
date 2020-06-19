@@ -51,7 +51,7 @@ function App() {
       <div style={{marginTop: useWindowSize().width < 500 ? "198px" : "110px"}} className="container-fluid sliderWrap">
         <Slider />
       </div>
-      <div className="container-md contentWrap">
+      <div className="contentWrap">
         <Intro />
         <Content1 />
         <Content2 />

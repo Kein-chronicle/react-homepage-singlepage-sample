@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../assets/logo-sample.png'
+import Logo from '../assets/eyedoc_logo.png'
 import './css.css'
 
 
@@ -27,19 +27,21 @@ function Content() {
                     <img className="logo" src={Logo} alt="logo" />
                 </a>
             </div>
-            <div className="col"></div>
+            <div className="col">
+
+            </div>
             <div className="row">
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'intro')}}>
-                    intro
+                    Product
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'content1')}}>
-                    content1
+                    System
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'content2')}}>
-                    content2
+                    Service
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'content3')}}>
-                    content3
+                    Company
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'constactUs')}}>
                     contact us

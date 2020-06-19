@@ -1,6 +1,6 @@
 .logo {
-    width: 100px;
-    height: auto;
+    width: auto;
+    height: 40px;
 }
 
 .menuBtn {
@@ -11,7 +11,7 @@
 
 .introSide img {
     max-width: 300px;
-    max-height: 400px;
+    /* max-height: 400px; */
 }
 .introSide > div {
     padding: 15px;
@@ -37,9 +37,9 @@
 .contactUsSide {
     color: gray;
 }
-.contactUsSide > .mapSide {
+.mapSide {
     margin-top: 55px;
-    height: 300px;
+    height: 400px;
     background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -77,5 +77,62 @@
 }
 
 .contentSide img {
-    max-width: 70%;
+    max-width: 80%;
+}
+
+#vjs_video_3 > div {
+    display: none;
+}
+#vjs_video_3 > button {
+    display: none;
+}
+
+#vjs_video_3 {
+    width: 100% !important;
+    height: auto !important;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+.introDesignPage {
+    /* margin-top: 50px; */
+    /* margin-bottom: 50px; */
+    margin: 0px;
+    height: 700px;
+}
+
+.systemIntro > h1 {
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 3rem;
+}
+.systemIntro {
+    font-size: 1em;
+}
+
+.introDesignPageText {
+    /* background-color: rgba(255, 255, 255, 0.3); */
+}
+
+.introDesignPageText > h2 {
+    font-weight: bolder;
+    color: rgb(55, 58, 203);
+}
+
+.introDesignPageTextDes {
+    padding-bottom: 15px;
+    font-weight: bolder;
+    color: gray;
+}
+
+.introItem {
+    width: 110px;
+    height: 110px;
+    border: 9px solid rgba(0, 0, 0, 0.3);
+    margin: 0px;
+    border-radius: 55px;
+    margin-top: 30px;
 }

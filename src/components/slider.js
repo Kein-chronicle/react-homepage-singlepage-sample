@@ -1,12 +1,69 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './css.css'
+import videojs from 'video.js';
 
-import Image1 from '../assets/background-sample.jpg'
+import introEye from '../assets/intro_eye.png'
+import videoSrc from '../assets/main_video.mp4'
+
 
 function Content() {
+    const playerRef = useRef();
+
+    useEffect(() => {
+    const player = videojs(playerRef.current, { autoplay: true, muted: true }, () => {
+        player.src(videoSrc);
+    });
+
+    return () => {
+        player.dispose();
+    };
+    }, []);
     return (
         <div className="sliderSide">
-            <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
+            <div data-vjs-player>
+                <video ref={playerRef} autoPlay={true} loop={true} className="video-js vjs-16-9" playsInline />
+            </div>
+            <div className="container">
+
+                <div className="introDesignPage row"
+                    style={{
+                        backgroundImage:`url(${introEye})`,
+                        backgroundRepeat:'no-repeat',
+                        backgroundPosition:'right',
+                        backgroundSize:'auto 100%'
+                    }}
+                >
+                    <div className="introDesignPageText col-7 align-self-center">
+                        <div className="introDesignPageTextDes">
+                            VR로 쉽고 간편한 건강 체크 솔루션 제공
+                        </div>
+                        <h2>"눈은 건강의 indicator"</h2>
+                        <div className="row">
+                            <div className="col"></div>
+                            <div className="introItem row">
+                                <div className="col align-self-center">
+                                    안과
+                                </div>
+                            </div>
+                            {/* <div className="col"></div> */}
+                            <div className="introItem row">
+                                <div className="col align-self-center">
+                                    이빈후과
+                                </div>
+                            </div>
+                            {/* <div className="col"></div> */}
+                            <div className="introItem row">
+                                <div className="col align-self-center">
+                                    신경과
+                                </div>
+                            </div>
+                            <div className="col"></div>
+                        </div>
+                    </div>
+                    <div className="col-3"></div>
+                </div>
+            </div>
+            {/* <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
                 <ol className="carousel-indicators">
                     <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -43,7 +100,7 @@ function Content() {
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     <span className="sr-only">Next</span>
                 </a>
-            </div>
+            </div> */}
         </div>
     )
 }
