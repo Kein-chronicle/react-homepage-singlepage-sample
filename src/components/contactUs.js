@@ -1,13 +1,19 @@
 import React from 'react'
+import Map from '../assets/m2smap.png'
 import Image from '../assets/m2s_logo_gray.png'
 
 function Content() {
     return (
         <div id="constactUs" className="container" style={{marginTop:'4rem', marginBottom:'5rem'}}>
-            <div className="row mapSide align-items-center">
-                <div className="col">
-                    <h1>Map Here</h1>
-                </div>
+            <div className="mapSide">
+                <a href="https://www.google.co.kr/maps/place/LH+%ED%8C%90%EA%B5%90%EC%A0%9C2%ED%85%8C%ED%81%AC%EB%85%B8%EB%B0%B8%EB%A6%AC+%EA%B8%B0%EC%97%85%EC%84%B1%EC%9E%A5%EC%84%BC%ED%84%B0/@37.4107232,127.0804501,14.27z/data=!4m5!3m4!1s0x357ca7f3e2b4c2a5:0xe25bd0c77871ffd!8m2!3d37.4106752!4d127.0953089?hl=ko" target="_blank">
+                <img src={Map} style={{width:"100%", height:"100%"}} />
+                </a>
+                
+                {/* <div className="col">
+                    <img src={Map} style={{width:"100%", height:"100%"}} />
+
+                </div> */}
             </div>
             <div className="contactInfo row">
                 <div className="col">
