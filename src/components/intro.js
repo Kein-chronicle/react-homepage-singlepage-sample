@@ -68,8 +68,8 @@ function Content() {
             </div>
             <div style={{marginBottom:'5rem', color:'gray', fontSize:"18px"}}>
                 <div>
-                    <p><span style={{fontWeight:'bold', color:'black'}}>Eye Dr. Pro</span> 시력검사 등 총 11종의 측정 제공</p>
-                    <p><span style={{fontWeight:'bold', color:'black'}}>Eye Dr. Lite</span> 시력검사 등 총 7종의 측정 제공</p>
+                    <p><span style={{fontWeight:'bold', color:'black'}}>Eye Dr. Pro</span> 시력측정 등 총 11종의 측정 제공</p>
+                    <p><span style={{fontWeight:'bold', color:'black'}}>Eye Dr. Lite</span> 시력측정 등 총 7종의 측정 제공</p>
                 </div>
                 {/* <div style={{marginTop:'3rem'}}> */}
                     {/* <img src={difference} alt="difference" /> */}

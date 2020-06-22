@@ -64,7 +64,7 @@ function Content() {
                 <div className="col" />
                 <div style={useWindowSize().width < 500 ? null : {width:'30%'}}>
                     <GapLine color="navy" />
-                    <h1 style={{color:'navy'}}>눈 검사</h1>
+                    <h1 style={{color:'navy'}}>눈 측정</h1>
                     <GapLine color="navy" />
                     <div>
                         <Circle text='VR<br />APP' color="navy" />
