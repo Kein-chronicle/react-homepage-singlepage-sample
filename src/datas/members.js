@@ -1,6 +1,17 @@
+import m1 from '../assets/members/m1.png'
+import m2 from '../assets/members/m2.png'
+import m3 from '../assets/members/m3.png'
+import m4 from '../assets/members/m4.png'
+import m5 from '../assets/members/m5.png'
+import m6 from '../assets/members/m6.png'
+import m7 from '../assets/members/m7.png'
+import m8 from '../assets/members/m8.png'
+import m9 from '../assets/members/m9.png'
+
+
 const data = [
     {
-      profile:'../assets/members/m1.png',
+      profile:m1,
       title:'대표이사',
       name:'이 태휘',
       history:[
@@ -10,7 +21,7 @@ const data = [
       ]
     },
     {
-      profile:'../assets/members/m2.png',
+      profile:m2,
       title:'관리/영업',
       name:'류 종호',
       history:[
@@ -20,7 +31,7 @@ const data = [
       ]
     },
     {
-      profile:'../assets/members/m3.png',
+      profile:m3,
       title:'의료자문',
       name:'윤 영욱',
       history:[
@@ -30,7 +41,7 @@ const data = [
       ]
     },
     {
-      profile:'../assets/members/m4.png',
+      profile:m4,
       title:'콘텐츠개발',
       name:'남궁 석',
       history:[
@@ -40,7 +51,7 @@ const data = [
       ]
     },
     {
-      profile:'../assets/members/m5.png',
+      profile:m5,
       title:'헬스케어기획',
       name:'홍 동기',
       history:[
@@ -50,7 +61,7 @@ const data = [
       ]
     },
     {
-      profile:'../assets/members/m6.png',
+      profile:m6,
       title:'의료자문',
       name:'김 병조',
       history:[
@@ -60,7 +71,7 @@ const data = [
       ]
     },
     {
-      profile:'../assets/members/m7.png',
+      profile:m7,
       title:'헬스케어개발',
       name:'변 강섭',
       history:[
@@ -70,7 +81,7 @@ const data = [
       ]
     },
     {
-      profile:'../assets/members/m8.png',
+      profile:m8,
       title:'마케팅/해외',
       name:'백 성주',
       history:[
@@ -80,7 +91,7 @@ const data = [
       ]
     },
     {
-      profile:'../assets/members/m9.png',
+      profile:m9,
       title:'의료개발',
       name:'백 성주',
       history:[

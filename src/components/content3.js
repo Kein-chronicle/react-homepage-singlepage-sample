@@ -6,16 +6,6 @@ import Image3 from '../assets/m2s3.png'
 import Image4 from '../assets/m2s4.png'
 import './css.css'
 
-// import m1 from 
-// import m2 from 
-// import m3 from '../assets/members/m3.png'
-// import m4 from '../assets/members/m4.pnt'
-// import m5 from '../assets/members/m5.pnt'
-// import m6 from '../assets/members/m6.pnt'
-// import m7 from '../assets/members/m7.pnt'
-// import m8 from '../assets/members/m8.pnt'
-// import m9 from '../assets/members/m9.pnt'
-
 import members from '../datas/members'
 
 // Hook
@@ -49,12 +39,82 @@ function useWindowSize() {
     return windowSize;
 }
 
-function MemberSet() {
+function MemberSet({item}) {
+  const profile = item.profile
+  const title = item.title
+  const name = item.name
+  const [historys, setHistory] = useState([])
+  useEffect(()=>{
+    var arr = []
+    for (let i = 0; i < item.history.length; i++) {
+      const history = item.history[i];
+      arr.push(<div>{history}</div>)
+    }
+    setHistory(arr)
+  }, [])
+  
+
+  return (
+    <div className="d-flex text-left" style={{padding:'10px'}}>
+      <div style={{marginRight:'10px'}}>
+        <img src={profile} style={{width:'120px', height:'120px'}} />
+      </div>
+      <div className="flex-grow-1">
+        <div style={{fontWeight:'bolder', paddingBottom:'8px'}}>
+          {title} {name}
+        </div>
+        <div style={{fontSize:'10px', lineHeight:'20px', color:'gray'}}>
+          {historys}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function MemberViewWrap() {
+
+  const [membersView1, setMembersView1] = useState([])
+  const [membersView2, setMembersView2] = useState([])
+  const [membersView3, setMembersView3] = useState([])
+
+  useEffect(()=>{
+    var member1 = []
+    var member2 = []
+    var member3 = []
+
+    for (let i = 0; i < members.length; i++) {
+      const item = members[i];
+      var member = <MemberSet item={item} />
+      if (i <= 2) {
+        member1.push(member)
+      } else if (i <= 5) {
+        member2.push(member)
+      } else {
+        member3.push(member)
+      }
+    }
+
+    setMembersView1(member1)
+    setMembersView2(member2)
+    setMembersView3(member3)
+
+  }, [])
   
   return (
-    <div>
-
+    <div className={useWindowSize().width > 500 ? "row" : null}>
+      <div className="col" />
+      <div>
+        {membersView1}
+      </div>
+      <div>
+        {membersView2}
+      </div>
+      <div>
+        {membersView3}
+      </div>
+      <div className="col" />
     </div>
+    
   )
 }
 
@@ -70,7 +130,8 @@ function Content() {
               <img style={{width:'340px', padding:'20px'}} src={CompanyBottom} alt="content1-Image3" />
             </div>
             <div className="container">
-                <div className={useWindowSize().width > 500 ? "row" : null}>
+              <MemberViewWrap />
+                {/* <div className={useWindowSize().width > 500 ? "row" : null}>
                     <div className="col">
                         <img style={{width:'100%'}} src={Image2} />
                     </div>
@@ -80,7 +141,7 @@ function Content() {
                     <div className="col">
                         <img style={{width:'100%'}} src={Image4} />
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
