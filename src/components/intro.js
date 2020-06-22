@@ -49,9 +49,10 @@ function Content() {
                 </div>
             </div>
             <div className={useWindowSize().width < 500 ? null : "row"} style={{marginTop:'3rem', marginBottom:'2rem', color:'gray'}}>
+                <div className="col" />
                 <div className="col">
                     <div>
-                        <img style={{width:'70%'}} src={eyedrPro} alt="eyedr pro" />
+                        <img style={{width:'400px'}} src={eyedrPro} alt="eyedr pro" />
                     </div>
                     <div>
                         Eye Dr. Pro
@@ -59,12 +60,13 @@ function Content() {
                 </div>
                 <div className="col">
                     <div>
-                        <img style={{width:'70%'}} src={eyedrLite} alt="eyedr lite" />
+                        <img style={{width:'400px'}} src={eyedrLite} alt="eyedr lite" />
                     </div>
                     <div>
                         Eye Dr. Lite
                     </div>
                 </div>
+                <div className="col" />
             </div>
             <div style={{marginBottom:'5rem', color:'gray', fontSize:"18px"}}>
                 <div>

@@ -59,7 +59,7 @@ function Content() {
             </div>
             <div className={useWindowSize().width < 500 ? null : "row"} style={{marginLeft:'0px', marginRight:'0px'}}>
                 <div className="col" />
-                <div style={useWindowSize().width < 500 ? null : {width:'30%'}}>
+                <div style={useWindowSize().width < 500 ? null : {width:'30%', maxWidth:'400px'}}>
                     <GapLine color="navy" />
                     <h1 style={{color:'navy'}}>눈 측정</h1>
                     <GapLine color="navy" />
@@ -68,7 +68,7 @@ function Content() {
                     </div>
                     <img src={Test_img} style={{marginTop:'20px'}} alt="content1-Image2" />
                 </div>
-                <div style={useWindowSize().width < 500 ? null : {width:'30%'}}>
+                <div style={useWindowSize().width < 500 ? null : {width:'30%', maxWidth:'400px'}}>
                     <GapLine color="gold" />
                     <h1 style={{color:'gold'}}>콘텐츠</h1>
                     <GapLine color="gold" />
@@ -86,7 +86,7 @@ function Content() {
                         <div className="flex-grow-1" />
                     </div>
                 </div>
-                <div style={useWindowSize().width < 500 ? null : {width:'30%'}}>
+                <div style={useWindowSize().width < 500 ? null : {width:'30%', maxWidth:'400px'}}>
                     <GapLine color="Indigo" />
                     <h1 style={{color:'Indigo'}}>O2O Service</h1>
                     <GapLine color="Indigo" />
