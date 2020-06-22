@@ -48,7 +48,7 @@ function Content() {
     }, []);
     return (
         <div className="sliderSide">
-            <div className="d-flex" style={{backgroundColor:'gray'}}>
+            <div className="d-flex" >
                 <div className="flex-grow-1" />
                 <div data-vjs-player style={{display:useWindowSize().width < 500 ? 'none' : 'block', maxWidth:'1800px'}}>
                     <video ref={playerRef} autoPlay={true} loop={true} className="video-js vjs-16-9" playsInline />
