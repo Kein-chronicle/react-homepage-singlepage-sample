@@ -6,6 +6,17 @@ import Image3 from '../assets/m2s3.png'
 import Image4 from '../assets/m2s4.png'
 import './css.css'
 
+// import m1 from 
+// import m2 from 
+// import m3 from '../assets/members/m3.png'
+// import m4 from '../assets/members/m4.pnt'
+// import m5 from '../assets/members/m5.pnt'
+// import m6 from '../assets/members/m6.pnt'
+// import m7 from '../assets/members/m7.pnt'
+// import m8 from '../assets/members/m8.pnt'
+// import m9 from '../assets/members/m9.pnt'
+
+import members from '../datas/members'
 
 // Hook
 function useWindowSize() {
@@ -36,9 +47,19 @@ function useWindowSize() {
     }, []); // Empty array ensures that effect is only run on mount and unmount
   
     return windowSize;
-  }
+}
+
+function MemberSet() {
+  
+  return (
+    <div>
+
+    </div>
+  )
+}
 
 function Content() {
+
 
     return (
         <div id="content3" style={{marginBottom:'3rem'}}>

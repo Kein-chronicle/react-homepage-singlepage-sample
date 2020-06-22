@@ -33,7 +33,7 @@ function useWindowSize() {
     }, []); // Empty array ensures that effect is only run on mount and unmount
   
     return windowSize;
-  }
+}
 
 function Content() {
     return (
@@ -73,9 +73,9 @@ function Content() {
                         O2O service
                     </p>
                 </div>
-                <div style={{marginTop:'3rem'}}>
+                {/* <div style={{marginTop:'3rem'}}> */}
                     {/* <img src={difference} alt="difference" /> */}
-                </div>
+                {/* </div> */}
             </div>
         </div>
     )
