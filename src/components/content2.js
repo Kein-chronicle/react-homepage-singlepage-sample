@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Image1 from '../assets/service1.png'
-import Image2 from '../assets/service2.png'
-import Image3 from '../assets/service3.png'
 import Test_img from '../assets/service_test.png'
 import Content_img from '../assets/service_content.png'
 import O2o_img from '../assets/service_o2o.png'

@@ -6,7 +6,7 @@ function Content() {
     return (
         <div id="constactUs" className="container" style={{marginTop:'4rem', marginBottom:'5rem'}}>
             <div className="mapSide">
-                <a href="https://www.google.co.kr/maps/place/LH+%ED%8C%90%EA%B5%90%EC%A0%9C2%ED%85%8C%ED%81%AC%EB%85%B8%EB%B0%B8%EB%A6%AC+%EA%B8%B0%EC%97%85%EC%84%B1%EC%9E%A5%EC%84%BC%ED%84%B0/@37.4107232,127.0804501,14.27z/data=!4m5!3m4!1s0x357ca7f3e2b4c2a5:0xe25bd0c77871ffd!8m2!3d37.4106752!4d127.0953089?hl=ko" target="_blank">
+                <a rel="noopener noreferrer" href="https://www.google.co.kr/maps/place/LH+%ED%8C%90%EA%B5%90%EC%A0%9C2%ED%85%8C%ED%81%AC%EB%85%B8%EB%B0%B8%EB%A6%AC+%EA%B8%B0%EC%97%85%EC%84%B1%EC%9E%A5%EC%84%BC%ED%84%B0/@37.4107232,127.0804501,14.27z/data=!4m5!3m4!1s0x357ca7f3e2b4c2a5:0xe25bd0c77871ffd!8m2!3d37.4106752!4d127.0953089?hl=ko" target="_blank">
                 <img src={Map} style={{width:"100%", height:"100%"}} />
                 </a>
                 
@@ -24,8 +24,8 @@ function Content() {
                     Tel: +82-31-8017-0418<br />
                     Fax: +82-31-8017-0419<br />
                     E-mail: m2s@m2skorea.com<br /><br />
-                    Homepage: <a href="https://m2skorea.com/" target="_blank">https://m2skorea.com</a><br />
-                    VROR: <a href="https://www.vror-icare.com/" target="_blank">https://www.vror-icare.com</a>
+                    Homepage: <a rel="noopener noreferrer" href="https://m2skorea.com/" target="_blank">https://m2skorea.com</a><br />
+                    VROR: <a rel="noopener noreferrer" href="https://www.vror-icare.com/" target="_blank">https://www.vror-icare.com</a>
                 </div>
                 <div>
                     <img src={Image} alt="content1-Imagec" />

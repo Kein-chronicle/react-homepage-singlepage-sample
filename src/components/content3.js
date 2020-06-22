@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import CompanyTop from '../assets/company-top.png'
 import CompanyBottom from '../assets/company-bottom.png'
-import Image2 from '../assets/m2s2.png'
-import Image3 from '../assets/m2s3.png'
-import Image4 from '../assets/m2s4.png'
 import './css.css'
 
 import members from '../datas/members'
@@ -46,7 +43,7 @@ function MemberSet({item}) {
     var arr = []
     for (let i = 0; i < item.history.length; i++) {
       const history = item.history[i];
-      arr.push(<div>{history}</div>)
+      arr.push(<div key={i+"history"}>{history}</div>)
     }
     setHistory(arr)
   }, [])
@@ -82,7 +79,7 @@ function MemberViewWrap() {
 
     for (let i = 0; i < members.length; i++) {
       const item = members[i];
-      var member = <MemberSet item={item} />
+      var member = <MemberSet item={item} index={i} key={i+"wrap"} />
       if (i <= 2) {
         member1.push(member)
       } else if (i <= 5) {

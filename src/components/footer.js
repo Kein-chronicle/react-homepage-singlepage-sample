@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from '../assets/m2s_logo_white.png'
 import './css.css'
-import Image from '../assets/sample_img.jpg'
+// import Image from '../assets/sample_img.jpg'
 
 function Content() {
     const menuClick = (e, menu) => {
