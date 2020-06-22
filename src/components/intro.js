@@ -39,7 +39,10 @@ function Content() {
     return (
         <div id="intro" className="contentSide introSide">
             <div style={{marginTop:'5rem'}}>
-                <h3 style={{color:'gray'}}>의료기기 VROR의 기술 그대로 일반 VR HMD기기에 적용하여</h3>
+                <div className="container" style={{textAlign:'right', color:'CornflowerBlue'}}>
+                    <a href="https://www.vror-icare.com/" target="_blank">VROR 자세히보기</a>
+                </div>
+                <h3 style={{color:'gray'}}>의료기기 <span style={{color:'CornflowerBlue'}}>VROR</span>의 기술 그대로 일반 VR HMD기기에 적용하여</h3>
                 <h1 style={{paddingTop:'15px'}}>쉽게 눈 건강 상태를 체크할 수 있는 디지털 헬스케어 제품</h1>
                 <div>
                     <img style={{width:'auto', height:'60px', margin:'20px'}} src={wideLogo} alt="eyedr logo wide" />
@@ -67,11 +70,6 @@ function Content() {
                 <div>
                     <p><span style={{fontWeight:'bold', color:'black'}}>Eye Dr. Pro</span> 시력검사 등 총 11종의 측정 제공</p>
                     <p><span style={{fontWeight:'bold', color:'black'}}>Eye Dr. Lite</span> 시력검사 등 총 7종의 측정 제공</p>
-                    <p>
-                        그외<br />
-                        Eye care service<br />
-                        O2O service
-                    </p>
                 </div>
                 {/* <div style={{marginTop:'3rem'}}> */}
                     {/* <img src={difference} alt="difference" /> */}
