@@ -44,7 +44,7 @@ function Content() {
                     Company
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'constactUs')}}>
-                    contact us
+                    Contact us
                 </a>
             </div>
         </div>
