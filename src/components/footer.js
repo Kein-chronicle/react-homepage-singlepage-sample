@@ -69,7 +69,6 @@ function Content() {
                     </a>
                 </div>
                 <div>
-                    This hompage can give product's infomation. 
                     <br />
                     Copyright by M2S+
                 </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Image from '../assets/m2s1.png'
+import CompanyTop from '../assets/company-top.png'
+import CompanyBottom from '../assets/company-bottom.png'
 import Image2 from '../assets/m2s2.png'
 import Image3 from '../assets/m2s3.png'
 import Image4 from '../assets/m2s4.png'
@@ -42,7 +43,10 @@ function Content() {
     return (
         <div id="content3" style={{marginBottom:'3rem'}}>
             <div>
-                <img style={{width:'100%'}} src={Image} alt="content1-Image3" />
+                <img style={{width:'100%'}} src={CompanyTop} alt="content1-Image3" />
+            </div>
+            <div>
+              <img style={{width:'340px', padding:'20px'}} src={CompanyBottom} alt="content1-Image3" />
             </div>
             <div className="container">
                 <div className={useWindowSize().width > 500 ? "row" : null}>

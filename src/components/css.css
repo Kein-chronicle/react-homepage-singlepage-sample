@@ -138,3 +138,7 @@ video {
     border-radius: 55px;
     margin-top: 30px;
 }
+
+.wordWrap {
+    word-wrap: normal;
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '../assets/eyedoc_logo.png'
+import wideLogo from '../assets/eyedr_logo_wide.png'
 import './css.css'
 
 
@@ -24,7 +25,7 @@ function Content() {
         >
             <div className="col">
                 <a href=" #" onClick={(e)=>{menuClick(e, 'top')}}>
-                    <img className="logo" src={Logo} alt="logo" />
+                    <img className="logo" src={wideLogo} alt="logo" />
                 </a>
             </div>
             <div className="col">

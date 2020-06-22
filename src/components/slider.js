@@ -48,7 +48,7 @@ function Content() {
     }, []);
     return (
         <div className="sliderSide">
-            <div data-vjs-player>
+            <div data-vjs-player style={{display:useWindowSize().width < 500 ? 'none' : 'block'}}>
                 <video ref={playerRef} autoPlay={true} loop={true} className="video-js vjs-16-9" playsInline />
             </div>
             {

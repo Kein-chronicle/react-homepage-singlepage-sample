@@ -44,7 +44,7 @@ function useWindowSize() {
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{wordBreak:'keep-all'}}>
       <div className="container-md menuWrap fixed-top">
         <Menu />
       </div>
