@@ -30,7 +30,7 @@ function Content() {
             <div className="col"></div>
             <div className="row">
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'intro')}}>
-                    소개
+                    홈
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'content1')}}>
                     content1
