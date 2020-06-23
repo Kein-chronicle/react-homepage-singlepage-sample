@@ -33,16 +33,16 @@ function Content() {
                     홈
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'content1')}}>
-                    content1
+                    콘텐츠1
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'content2')}}>
-                    content2
+                    콘텐츠2
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'content3')}}>
-                    content3
+                    콘텐츠3
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'constactUs')}}>
-                    contact us
+                    콘택트 어스
                 </a>
             </div>
         </div>
