@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../assets/logo-sample.png'
+import Logo from '../assets/hojundot-logo-tran.png'
 import './css.css'
 
 
@@ -19,18 +19,21 @@ function Content() {
     }
     return (
         <div 
-        className="row"
+        className="container"
         style={{margin:0}}
         >
-            <div className="col">
-                <a href=" #" onClick={(e)=>{menuClick(e, 'top')}}>
-                    <img className="logo" src={Logo} alt="logo" />
-                </a>
-            </div>
-            <div className="col"></div>
             <div className="row">
+                <div className="col-3"></div>   
+                <div className="col-6">
+                    <a href=" #" onClick={(e)=>{menuClick(e, 'top')}}>
+                    <img className="logo" src={Logo} alt="logo" /></a>
+                    </div>
+                <div className="col-3"></div>
+            </div>
+
+            <div className="d-flex justify-content-around">
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'intro')}}>
-                    home
+                        home
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'content1')}}>
                     projects
@@ -45,7 +48,7 @@ function Content() {
                     about me
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'constactUs')}}>
-                    contact me
+                    contact
                 </a>
             </div>
         </div>

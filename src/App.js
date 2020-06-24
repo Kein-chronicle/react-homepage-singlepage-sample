@@ -45,7 +45,7 @@ function useWindowSize() {
 function App() {
   return (
     <div className="App">
-      <div className="container-md menuWrap fixed-top">
+      <div className="d-flex justify-content-center fixed-top">
         <Menu />
       </div>
       <div style={{marginTop: useWindowSize().width < 500 ? "198px" : "110px"}} className="container-fluid sliderWrap">
