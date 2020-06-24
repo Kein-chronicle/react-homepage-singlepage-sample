@@ -30,19 +30,22 @@ function Content() {
             <div className="col"></div>
             <div className="row">
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'intro')}}>
-                    홈
+                    home
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'content1')}}>
-                    콘텐츠1
+                    projects
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'content2')}}>
-                    콘텐츠2
+                    ongoing projects
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'content3')}}>
-                    콘텐츠3
+                    links
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'constactUs')}}>
-                    콘택트 어스
+                    about me
+                </a>
+                <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'constactUs')}}>
+                    contact me
                 </a>
             </div>
         </div>
