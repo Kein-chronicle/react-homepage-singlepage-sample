@@ -93,7 +93,7 @@ const data = [
     {
       profile:m9,
       title:'의료개발',
-      name:'백 성주',
+      name:'서 영우',
       history:[
         '2001~2009 고려대 의학박사',
         '2014~현재 고대 안산병원 안과 과장',

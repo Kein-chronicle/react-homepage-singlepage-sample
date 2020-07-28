@@ -132,7 +132,7 @@ function Content() {
               <div style={{textAlign:'left', marginTop:'100px', marginLeft:'10px', color:'rgba(255,255,255,0.6)'}}>
                   <h1 style={{color:'white'}}>엠투에스는</h1>
                   창의적이고 놀라운 VR과 AR, 디지털 콘텐츠 <br />
-                  제작능력을 보유하고 잇는 기업입니다.<br />
+                  제작능력을 보유하고 있는 기업입니다.<br />
                   VR, AR기술력을 엔터테인먼트에 머무르지 않고 의료와 디지털 헬스케어 분야에 적용하며<br />
                   남들과는 다른 길을 개척해나가고 있습니다.<br />
               </div>
