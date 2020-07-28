@@ -51,7 +51,7 @@ function useWindowSize() {
 function App() {
   return (
     <div className="App" style={{wordBreak:'keep-all'}}>
-      <div style={{width: useWindowSize().width, height:useWindowSize().height }} className="container-fluid sliderWrap">
+      <div className="container-fluid sliderWrap">
         {
           useWindowSize().width > 400 ?
           <Slider />
@@ -60,7 +60,7 @@ function App() {
         }
         
       </div>
-      <div style={{width: useWindowSize().width, height:useWindowSize().height }} className="container-fluid sliderWrap">
+      <div className="container-fluid sliderWrap">
       {
           useWindowSize().width > 400 ?
           <Slider2 />
