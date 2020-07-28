@@ -1,41 +1,95 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import System1 from '../assets/system1.png'
 import System2 from '../assets/system2.png'
 import './css.css'
 
+
+import Image1 from '../assets/backGreen.png'
+// Hook
+function useWindowSize() {
+    const isClient = typeof window === 'object';
+  
+    function getSize() {
+      return {
+        width: isClient ? window.innerWidth : 0,
+        height: isClient ? window.innerHeight : undefined
+      };
+    }
+  
+    const [windowSize, setWindowSize] = useState(getSize);
+  
+    useEffect(() => {
+      if (!isClient) {
+        return false;
+      }
+      
+      function handleResize() {
+        setWindowSize(getSize());
+      }
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []); // Empty array ensures that effect is only run on mount and unmount
+  
+    return windowSize;
+  }
+
 function Content() {
     return (
-        <div id="content1" className="contentSide contentSideGray" style={{paddingTop:'5rem', paddingBottom:'5rem'}}>
+        <div id="content1" style={{height:useWindowSize().height, backgroundImage:`url(${Image1})`, backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
             <div className="container">
-
-                <div className="row">
-                    <div style={{textAlign:'center', marginBottom:'2rem'}}>
-                        <img src={System1} alt="content1-Image3" /><br />
-                        <img src={System2} alt="content1-Image3" />
-                    </div>
-                    <div className="col systemIntro" style={{minWidth:'300px'}}>
-                        <h1>
-                            VR HMD 영상 자극에 의한 <br />
-                            눈의 움직임을 분석하는 측정 알고리즘 <br />
-                            이를 이용한 정확한 검진결과 도출 <br />
-                        </h1>
-                        <h4>VR Tech + Eye Tracking</h4>
-                        Eye tracking sensor에서 도출된 생체데이터를 분석 <br />
-                        고려대학교 의료원과 안과,신경과 측정 알고리즘개발 <br /><br />
-
-                        <h4>측정 결과의 디지털化</h4>
-                        과학적 계측방법을 통한 일관적이고 신뢰성 있는 검진 결과 구현 <br />
-                        아날로그 검진기기 및 고부가가치 장비(시야검사기) 대체 <br /><br />
-
-                        <h4>축적된 Data를 활용한 질환 상태 예측 및 분석 A.I</h4>
-                        의료진 요구사항 반영한 DB형태 구축하여 시계열적 분석 <br />
-                        Big Data 활용하여 질환 발병 가능성 등 예방 의학에 활용<br /><br />
-
-                        <h4>적극적 측정 참여 유도를 위한 Fun 측정 프로토콜 적용</h4>
-                        가상의 측정 공간 내 재미있는 영상 제공하여 적극적 측정참여 유도<br />
-                        헬스케어 시장으로 확대
-                    </div>
+              <div style={{display:'flex'}}>
+                <div style={{width:'5px', height:"60px", backgroundColor:'rgba(255,255,255,0.2)', marginTop:'50px'}}></div>
+                <div style={{width:'10px'}}></div>
+                <div style={{textAlign:'left', paddingTop:'50px', color:'rgba(255,255,255,0.4)', fontSize:'25px'}}>고객센터</div>
+              </div>
+              <div style={{marginTop:'40px', textAlign:'left', paddingLeft:'30px', fontSize:'28px', color:'white', display:'flex'}}>
+                <div>
+                  문의하기
                 </div>
+                <div style={{width:'120px'}}></div>
+                <div style={{felx:'4',display:'flex', flexDirection:'column', height:'120px', color:'rgba(255,255,255,0.5)', fontSize:'20px'}}>
+                  <div style={{flex:'1'}}></div>
+                  <div>
+                    대표전화 : 031-8017-0418
+                    <br />
+                    대표메일: m2s@m2skorea.com
+                  </div>
+                </div>
+                <div style={{flex:'3'}}></div>
+              </div>
+              <div style={{backgroundColor:"rgba(255,255,255,0.4)", height:'2px', marginTop:'50px'}}></div>
+              <div style={{marginTop:'40px', textAlign:'left', paddingLeft:'30px', fontSize:'28px', color:'white', display:'flex'}}>
+                <div>
+                  회원관리
+                </div>
+                <div style={{flex:'1'}}></div>
+                <div style={{display:'flex', flexDirection:'column', height:'120px', color:'rgba(255,255,255,0.5)', fontSize:'20px'}}>
+                  <div style={{flex:'1'}}></div>
+                  <div>
+                    {/* 대표전화 : 031-8017-0418
+                    <br />
+                    대표메일: m2s@m2skorea.com */}
+                  </div>
+                </div>
+                <div style={{flex:'3'}}></div>
+              </div>
+              <div style={{backgroundColor:"rgba(255,255,255,0.4)", height:'2px', marginTop:'50px'}}></div>
+              <div style={{marginTop:'40px', textAlign:'left', paddingLeft:'30px', fontSize:'28px', color:'white', display:'flex'}}>
+                <div>
+                  프레스 센터
+                </div>
+                <div style={{width:'120px'}}></div>
+                <div style={{felx:'4',display:'flex', flexDirection:'column', height:'120px', color:'rgba(255,255,255,0.5)', fontSize:'20px'}}>
+                  <div style={{flex:'1'}}></div>
+                  <div>
+                    보도자료&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style={{color:'white'}}>&#62;</span>
+                    <br />
+                    새소식&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style={{color:'white'}}>&#62;</span>
+                  </div>
+                </div>
+                <div style={{flex:'3'}}></div>
+              </div>
             </div>
         </div>
     )

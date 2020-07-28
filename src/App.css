@@ -22,3 +22,12 @@
   background-color: rgba(0, 0, 0, 0.9);
   color: gray;
 }
+
+@font-face { 
+  font-family: 'Nexon';
+  src: url('./assets/font/NEXON\ Lv1\ Gothic\ OTF.woff') format("woff");
+}
+
+body {
+  font-family: 'Nexon' !important;
+}

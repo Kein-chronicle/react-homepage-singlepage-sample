@@ -2,12 +2,18 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 
 import Menu from './components/menu'
-import Slider from './components/slider'
+import Slider from './components/slider5'
+import Slider2 from './components/slider6'
+import Slider3 from './components/mobile/slider3'
+import Slider4 from './components/mobile/slider4'
 import Intro from './components/intro'
 
 import Content1 from './components/content1'
 import Content2 from './components/content2'
-import Content3 from './components/content3'
+// import Content3 from './components/content3'
+
+import Content4 from './components/mobile/content4'
+import Content5 from './components/mobile/content5'
 
 import ContactUs from './components/contactUs'
 
@@ -45,22 +51,43 @@ function useWindowSize() {
 function App() {
   return (
     <div className="App" style={{wordBreak:'keep-all'}}>
-      <div className="container-md menuWrap fixed-top">
-        <Menu />
+      <div style={{width: useWindowSize().width, height:useWindowSize().height }} className="container-fluid sliderWrap">
+        {
+          useWindowSize().width > 400 ?
+          <Slider />
+          :
+          <Slider3 />
+        }
+        
       </div>
-      <div style={{marginTop: useWindowSize().width < 500 ? "198px" : "110px"}} className="container-fluid sliderWrap">
-        <Slider />
+      <div style={{width: useWindowSize().width, height:useWindowSize().height }} className="container-fluid sliderWrap">
+      {
+          useWindowSize().width > 400 ?
+          <Slider2 />
+          :
+          <Slider4 />
+        }
       </div>
+      <Menu />
       <div className="contentWrap">
-        <Intro />
-        <Content1 />
-        <Content2 />
-        <Content3 />
-        <ContactUs />
+        {/* <Intro /> */}
+        {useWindowSize().width > 400 ?
+          <Content1 />
+          :
+          <Content4 />
+        }
+        {useWindowSize().width > 400 ?
+          <Content2 />
+          :
+          <Content5 />
+        }
+        
+        {/* <Content3 />
+        <ContactUs /> */}
       </div>
-      <div className="container-fluid footerWrap">
+      {/* <div className="container-fluid footerWrap">
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 }
