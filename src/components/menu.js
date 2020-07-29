@@ -33,10 +33,10 @@ function Content() {
                     home
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'content1')}}>
-                    content1
+                    contentone
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'content2')}}>
-                    content2
+                    contenttwo
                 </a>
                 <a className="menuBtn" href=" #" onClick={(e)=>{menuClick(e, 'content3')}}>
                     content3
