@@ -3,7 +3,16 @@ import './App.css';
 
 import Menu from './components/menu'
 import Slider from './components/slider5'
-import Slider2 from './components/slider6'
+import Slider2 from './components/slider7'
+import Slider8 from './components/slider8'
+import Slider9 from './components/slider9'
+import Slider10 from './components/slider10'
+import Slider11 from './components/slider11'
+import Slider2mobile from './components/slider7mobile'
+import Slider8mobile from './components/slider8mobile'
+import Slider9mobile from './components/slider9mobile'
+import Slider10mobile from './components/slider10mobile'
+import Slider11mobile from './components/slider11mobile'
 import Slider3 from './components/mobile/slider3'
 import Slider4 from './components/mobile/slider4'
 import Intro from './components/intro'
@@ -63,9 +72,21 @@ function App() {
       <div className="container-fluid sliderWrap">
       {
           useWindowSize().width > 400 ?
-          <Slider2 />
+          <div>
+            <Slider2 />
+            <Slider8 />
+            <Slider9 />
+            <Slider10 />
+            <Slider11 />
+          </div>
           :
-          <Slider4 />
+          <div>
+          <Slider2mobile />
+          <Slider8mobile />
+          <Slider9mobile />
+          <Slider10mobile />
+          <Slider11mobile />
+          </div>
         }
       </div>
       <Menu />
